@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">تسجيل الدخول</legend>
+                <div class="form-group">
+                    <label>البريد الإلكتروني</label>
+                    <br>
+                    <input type="email" name="email" required class="form-control form-control-lg" value={{request.form.email}} >
+                <div class="form-group">
+                  <br>
+                 <label>كلمة المرور</label>
+                  <br>
+                    <input type="password" name="password" required class="form-control form-control-lg" value={{request.form.password}}>
+             </div>
+              </div>
+            </fieldset>
+            <div class="form-group">
+                 <p><input type="submit" class="btn btn-outline-info" value="دخول"></p>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
